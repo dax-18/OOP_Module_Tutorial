@@ -19,6 +19,8 @@ public class Product {
         return id;
     }
 
+    //Because JSON serializers like Jackson only include fields exposed through getters.
+    //So removing the getter makes the field invisible and drops it from the JSON output.
     public String getName() {
         return name;
     }
